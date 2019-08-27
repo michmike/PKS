@@ -15,16 +15,16 @@ spec:
       containers:
       - name: blog
         Image: demo.goharbor.io/vmworld/blogengineui:v4
-           resources:
+        resources:
                limits:
                    cpu: 1
                    memory: 800m
               requests:
                     cpu: .1
                     memory: 300m
-           ports:
+        ports:
              - containerPort: 80
-         nodeSelector:
+        nodeSelector:
         "beta.kubernetes.io/os": windows
   selector:
     matchLabels:
