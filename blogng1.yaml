@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: blogng
-    image: michmike/blogengineui:v4
+    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
     resources:
       limits:
         memory: "800Mi"
