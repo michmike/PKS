@@ -8,27 +8,27 @@ spec:
   replicas: 1
   template:
      metadata:
-  	name: blog-2019
-  	labels:
-    	  app: blog-2019
+      name: blog-2019
+      labels:
+          app: blog-2019
       spec:
-  	containers:
-  	- name: blog
-    	   Image: demo.goharbor.io/vmworld/blogengineui:v4
-    	   resources:
-      	     limits:
-        	       cpu: 1
-        	       memory: 800m
-      	    requests:
-        	        cpu: .1
-        	        memory: 300m
-    	   ports:
-      	   - containerPort: 80
+      containers:
+      - name: blog
+           Image: demo.goharbor.io/vmworld/blogengineui:v4
+           resources:
+               limits:
+                   cpu: 1
+                   memory: 800m
+              requests:
+                    cpu: .1
+                    memory: 300m
+           ports:
+             - containerPort: 80
          nodeSelector:
-    	"beta.kubernetes.io/os": windows
+        "beta.kubernetes.io/os": windows
   selector:
-	matchLabels:
-  	app: blog-2019
+    matchLabels:
+      app: blog-2019
 ---
 apiVersion: v1
 kind: Service
@@ -38,6 +38,6 @@ spec:
   type: ClusterIP
   ports:
   - protocol: TCP
-	port: 80
+    port: 80
   selector:
-	app: blog-2019
+    app: blog-2019
