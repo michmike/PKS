@@ -23,7 +23,7 @@ spec:
         ports:
              - containerPort: 80
         nodeSelector:
-        "beta.kubernetes.io/os": windows
+          "beta.kubernetes.io/os": windows
   selector:
     matchLabels:
       app: blog-2019
