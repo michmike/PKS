@@ -16,12 +16,10 @@ spec:
       - name: blog
         Image: demo.goharbor.io/vmworld/blogengineui:v4
         resources:
-               limits:
-                   cpu: 1
-                   memory: "800Mi"
-              requests:
-                    cpu: .1
-                    memory: "300Mi"
+          limits:
+            memory: "200Mi"
+          requests:
+            memory: "100Mi"
         ports:
              - containerPort: 80
         nodeSelector:
