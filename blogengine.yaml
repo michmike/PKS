@@ -7,11 +7,11 @@ metadata:
 spec:
   replicas: 1
   template:
-     metadata:
+    metadata:
       name: blog-2019
       labels:
-          app: blog-2019
-      spec:
+        app: blog-2019
+    spec:
       containers:
       - name: blog
         Image: demo.goharbor.io/vmworld/blogengineui:v4
