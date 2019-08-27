@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: blogng
-    image: demo.goharbor.io/vmworld/blogengineui:v4
+    image: michmike/blogengineui:v4
     resources:
       limits:
         memory: "800Mi"
