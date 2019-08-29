@@ -22,8 +22,8 @@ spec:
             memory: "100Mi"
         ports:
              - containerPort: 80
-        nodeSelector:
-          "beta.kubernetes.io/os": windows      
+      nodeSelector:
+        "beta.kubernetes.io/os": windows      
       tolerations:
       - key: "windows"
         value: "2019"
