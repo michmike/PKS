@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: blog
-        image: demo.goharbor.io/vmworld/demo:v2
+        image: michmike/blogngn:v1
         resources:
           limits:
             memory: "700Mi"
@@ -34,7 +34,7 @@ kind: Service
 metadata:
   name: blog
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - protocol: TCP
     port: 80
