@@ -17,13 +17,16 @@ spec:
         image: demo.goharbor.io/vmworld/blogengineui:v4
         resources:
           limits:
-            memory: "200Mi"
+            memory: "700Mi"
           requests:
             memory: "100Mi"
         ports:
              - containerPort: 80
         nodeSelector:
-          "beta.kubernetes.io/os": windows
+          "beta.kubernetes.io/os": windows      
+    tolerations:
+      - key: "windows"
+        value: "2019"
   selector:
     matchLabels:
       app: blog-2019
