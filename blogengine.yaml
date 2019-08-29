@@ -24,7 +24,7 @@ spec:
              - containerPort: 80
         nodeSelector:
           "beta.kubernetes.io/os": windows      
-    tolerations:
+      tolerations:
       - key: "windows"
         value: "2019"
   selector:
