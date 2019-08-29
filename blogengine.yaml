@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: blog
-        image: demo.goharbor.io/vmworld/blogengineui:v4
+        image: demo.goharbor.io/vmworld/demo:v2
         resources:
           limits:
             memory: "700Mi"
